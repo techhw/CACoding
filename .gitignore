@@ -3,7 +3,7 @@ out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 /.idea/sonarlint
-.idea/misc.xml
+/.idea/misc.xml
 
 ### Eclipse ###
 .apt_generated
