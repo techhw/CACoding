@@ -4,6 +4,7 @@ package interface_adapter.clear_users;
 
 import interface_adapter.ViewManagerModel;
 import use_case.clear_users.ClearOutputBoundary;
+import use_case.clear_users.ClearOutputData;
 
 public class ClearPresenter implements ClearOutputBoundary {
     private final ClearViewModel clearViewModel;
@@ -15,9 +16,9 @@ public class ClearPresenter implements ClearOutputBoundary {
     }
 
     @Override
-    public void prepareSuccessView() {
+    public void prepareSuccessView(ClearOutputData clearOutputData) {
         ClearState clearState = clearViewModel.getState();
-        clearState.setSuccessMessage("All Cleared.");
+        clearState.setUserDeleted(clearOutputData.getUserDeleted());
         clearViewModel.firePropertyChanged();
     }
 }

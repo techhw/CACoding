@@ -194,8 +194,8 @@ public class SignupView extends JPanel implements ActionListener, PropertyChange
         } else if (evt.getSource().equals(clearViewModel)) {
             // success message to show when clearState changes
             ClearState clearState = (ClearState) evt.getNewValue();
-            if (clearState.getSuccessMessage()!= null) {
-                JOptionPane.showMessageDialog(this, clearState.getSuccessMessage());
+            if (clearState.getUserDeleted()!= null) {
+                JOptionPane.showMessageDialog(this, clearState.getUserDeleted());
             }
         }
     }
